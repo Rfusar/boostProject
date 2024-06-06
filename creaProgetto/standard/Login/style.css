@@ -1,0 +1,75 @@
+#displayLogin{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/static/img/sfondo_login.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#cardImgLogin{
+  flex: 1;
+  background-color: #000; 
+}
+#cardCampiLogin{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+#cardLogin{
+  width: 50%;
+  height: 45%;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+}
+#titleLogin{
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 10px 0 20px 0;
+  color: #000;
+}
+#campiLogin{
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0 30px 0;
+
+}
+.campoLogin{
+  border: none;
+  border-bottom: 1px solid #52018c;
+  outline: none;
+  margin: 10px 30px;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+#btnLogin{
+  margin-top: 20px;
+  background-color: #52018c;
+  border-radius: 30px;
+  border: none;
+  transition: .8s;
+  padding: 15px;
+  color: #fff;
+}
+#campiLink{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.linkLogin{
+  text-decoration: none;
+  color: #000;
+  transition: .8s
+}
+.linkLogin.password:hover{
+  color: red
+}
+.linkLogin.register:hover{
+  color: green
+}
+
+
