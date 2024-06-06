@@ -67,6 +67,8 @@ continuaProgetto(){
   echo "          7s. MongoDB"
   echo "          8s. Redis"
   echo ""
+  echo "      esperimenti"
+  echo "          1e. tool"
   echo ""
   echo ""
   echo ""
