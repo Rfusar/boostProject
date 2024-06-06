@@ -53,9 +53,7 @@ case "$res" in
     echo "$loginCSS" > static/css/pages/login.css
     echo "$loginJS" > static/js/pages/login.js
     echo "$server" > server.py
-    clear && pwd
     ;;
-    
-
 esac
 
+cd "$percorso/$progetto"
