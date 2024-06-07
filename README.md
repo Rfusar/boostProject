@@ -9,3 +9,15 @@ Avviare lo script con il comando source
 ```bash
 source ./app.sh #cosi permette di spostarsi tra le direcctory nel terminale in esecuzione 
 ```
+
+o ancora meglio
+
+```bash
+nvim ~/.bashrc 
+
+#poi ci scrivi dentro
+TOOL(){
+    source path/to/app.sh
+}
+#cosi puo essere utilizzato ovunque con la parola TOOL
+```
