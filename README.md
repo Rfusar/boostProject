@@ -10,14 +10,22 @@ Avviare lo script con il comando source
 source ./app.sh #cosi permette di spostarsi tra le direcctory nel terminale in esecuzione 
 ```
 
-o ancora meglio
-
+o ancora meglio, aprite file di configurazione con un editor di testo ad esempio nvim
+per ubuntu è *bashrc* 
 ```bash
 nvim ~/.bashrc 
+```
 
-#poi ci scrivi dentro
+poi ci scrivi dentro
+
+```bash
 TOOL(){
     source path/to/app.sh
 }
-#cosi puo essere utilizzato ovunque con la parola TOOL
 ```
+poi 
+
+```bash
+source ~/.bashrc #oppure . ~/.bashrc
+```
+cosi puo essere utilizzato ovunque con la parola TOOL
