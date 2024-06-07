@@ -58,7 +58,7 @@ case "$res" in
     echo "$DB" > applicazione/DB.py
     echo "$rd" > applicazione/routes/dati.py
     echo "$rp" > applicazione/routes/pagine.py
-    echo "$ru" > applicazione/routes/users.py
+    echo "$ru" > applicazione/routes/user.py
     echo "" > templates/componenti/header.html
     echo "$loginHTML" > templates/login.html
     echo "$loginCSS" > static/css/pages/login.css
