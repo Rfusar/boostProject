@@ -10,8 +10,12 @@ if [ -z "$1" ]; then
     read -p ": " res
 
     if [ "$res" == "1" ]; then
-        . ./creaProgetto/init.sh
-        break
+      creaProgetto
+      read -p ": " res
+      case "$res" in 
+        "1m"). ./creaProgetto/dashboard.sh ;;
+      esac
+      break
 
     elif [ "$res" == "2" ]; then
         . ./continuaProgetto/init.sh
