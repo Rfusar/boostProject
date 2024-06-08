@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source ./menus.sh
+source ./update/flask.sh
 
 pathProgetti(){
 for file in pathProject/*; do
@@ -11,6 +12,14 @@ for file in pathProject/*; do
   done
 
   echo "$route"
+}
+
+update(){
+  creaProgetto
+  read -p ": " progettoUpdate
+  case "$progettoUpdate" in 
+    "1m") flaskUpdate;;
+  esac
 }
 
 github(){

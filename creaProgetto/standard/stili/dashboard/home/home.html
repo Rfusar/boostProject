@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% include "componenti/head.html" %}
+    <link rel="stylesheet" href="/static/css/pages/home.css">
+  </head>
+  <body>
+    
+    <section id="page">
+        {% include "componenti/sidebar.html" %}
+      <div id="display">
+        {% include "componenti/navbar.html" %}
+        {% include "componenti/main/home.html" %}
+      </div>
+    </section>
+
+    <script src="/static/js/pages/home.js"></script>
+    <script src="/static/js/charts/line.js"></script>
+    <script src="/static/js/charts/pie.js"></script>
+    <script src="/static/js/charts/menu.js"></script>
+  </body>
+</html>
+

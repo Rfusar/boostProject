@@ -1,0 +1,28 @@
+#sidebar h1{
+  text-align: center;
+  padding: 30px;
+  color: #fff;
+}
+#lineaSidebar{
+  margin: 0 10px;
+  height: 2px;
+  border-radius: 30px;
+  background-color: #fff;
+}
+#sidebar ul{
+  margin-top: 15px;
+}
+#sidebar ul li{
+  padding: 20px;
+  color: #fff;
+  list-style: none;
+  transition: 300ms;
+  border-left: 3px solid var(--bg-base2);
+}
+#sidebar ul li:hover{
+  background-color: var(--sidebar-hover);
+  border-left: 3px solid var(--sidebar-border);
+}
+.imgItemSidebar{
+  margin-right: 10px;
+}

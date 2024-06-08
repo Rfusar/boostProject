@@ -9,4 +9,3 @@ sess = lambda: session.get("utente")
 def HOME():
     if not inSessione(): return redirect("/")
     return render_template("home.html") 
-

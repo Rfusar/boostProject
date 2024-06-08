@@ -1,0 +1,14 @@
+nav{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#btnChangeColors{
+  position: absolute;
+  left: 20px;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  background-color: blue;
+  color: #fff;
+}

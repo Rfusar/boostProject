@@ -3,12 +3,12 @@ from flask import session
 USERS= [
     {
         "email": "admin@email.com",
-        "pw": "admin123",
+        "password": "admin123",
         "ruolo": "admin",
     },
     {
         "email": "utente@email.com",
-        "pw": "utente",
+        "password": "utente",
         "ruolo": "user",
     }
 ]
@@ -23,4 +23,3 @@ def createSessione(dati):
 
 def inSessione(): 
     return True if session.get("utente") else False
-

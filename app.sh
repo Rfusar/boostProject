@@ -21,8 +21,9 @@ if [ -z "$1" ]; then
 
 elif [ "$1" == "update" ]; then 
   cd "$workTOOL" 
-  nvim .
+  update
 
+    
 elif [ "$1" == "github" ]; then 
   github
 
