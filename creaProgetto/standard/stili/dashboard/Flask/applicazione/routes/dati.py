@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request, render_template
-from ..DB import inSessione
+from ..DB import inSessione, datiTabellaUsers
 
 import calendar, datetime, random
 
@@ -16,3 +16,13 @@ def RicercaAuto():
     return jsonify({
         "Line": datiLine 
     })
+
+@dati.route("/datiTabella", methods=["POST"])
+def datiTabella():
+    if not inSessione(): return jsonify({"res": "non hai il permesso"}), 403
+    if request.json.get("element") == "users":
+        for d in datiTabellaUsers:
+            if "password" in d.keys():
+                d.pop("password")
+        
+        return jsonify({"users": datiTabellaUsers})

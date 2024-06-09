@@ -4,7 +4,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  transition: 1s;
 }
 body{
   font-size: 16px;
@@ -13,9 +12,8 @@ body{
   cursor: default;
   font-family: "Ubuntu", sans-serif;
 }
-.pointer{
-  cursor: pointer;
-}
+.pointer{cursor: pointer;}
+.link{text-decoration: none;}
 
 
 

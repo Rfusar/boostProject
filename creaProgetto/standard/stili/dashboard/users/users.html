@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% include "componenti/head.html" %}
+    <link rel="stylesheet" href="/static/css/componenti/tablePage.css">
+  </head>
+  <body>
+    
+    <section id="page">
+        {% include "componenti/sidebar.html" %}
+      <div id="display">
+        {% include "componenti/navbar.html" %}
+        {% include "componenti/main/users.html" %}
+      </div>
+    </section>
+ 
+    <script defer src="/static/js/componenti/table.js"></script>
+  </body>
+</html>
+

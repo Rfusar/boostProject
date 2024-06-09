@@ -1,11 +1,29 @@
 from flask import Blueprint, render_template, redirect, session
-from ..DB import inSessione
+from ..DB import inSessione, datiTabellaUsers
+
+from random import randint
 
 pagine = Blueprint("pagine", __name__)
 
 sess = lambda: session.get("utente")
 
+for d in datiTabellaUsers: 
+    d.pop("password")
+
+
 @pagine.route("/home")
 def HOME():
     if not inSessione(): return redirect("/")
-    return render_template("home.html") 
+    printerSuccess = randint(0, 1000)
+    printerError = int(printerSuccess*2/100)
+    totalEmail = printerError+printerSuccess
+    datiCardReport = {
+        "error": printerError,
+        "success": printerSuccess,
+        "total": totalEmail
+    }
+    return render_template("home.html", datiCardReport=datiCardReport) 
+
+@pagine.route("/users")
+def users():
+    return render_template("users.html", users=datiTabellaUsers)

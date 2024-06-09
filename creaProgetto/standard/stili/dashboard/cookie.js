@@ -17,6 +17,20 @@ function getCookie(name) {
   return false;
 }
 
-if(!getCookie("colors")){setCookie("colors", "light")}
-if(!getCookie("corners")){setCookie("corners", "round")}
+for(const c of all){c.style.transition="0"}
+const btnCorners = document.querySelector("#btnChangeCorners")
+const btnColors = document.querySelector("#btnChangeColors")
+
+
+if(!getCookie("colors")){
+  btnColors.setAttribute("colors", "light")
+  setCookie("colors", "light")
+}
+else{btnColors.setAttribute("colors", getCookie("colors"))}
+
+if(!getCookie("corners")){
+  btnCorners.setAttribute("corners", "round")
+  setCookie("corners", "round")
+}
+else{btnCorners.setAttribute("corners", getCookie("corners"))}
 

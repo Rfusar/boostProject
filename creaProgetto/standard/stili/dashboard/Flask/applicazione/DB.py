@@ -1,4 +1,5 @@
 from flask import session
+import json
 
 USERS= [
     {
@@ -13,6 +14,8 @@ USERS= [
     }
 ]
 
+with open("applicazione/users.json") as f: 
+    datiTabellaUsers = json.loads(f.read())
 
 def createSessione(dati):
     session["utente"] = {

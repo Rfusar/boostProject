@@ -3,7 +3,7 @@
     <div class="cardReport error">
       <div class="cardReportDetail">
         <p>Error</p>
-        <h1>5</h1>
+        <h1 id="emailError">{{ datiCardReport["error"] }}</h1>
       </div>
       <div class="cardReportDetail">
         <i class="fa-solid fa-circle-exclamation imgCardReport" style="color: #e3ab10"></i>
@@ -12,7 +12,7 @@
     <div class="cardReport success">
       <div class="cardReportDetail">
         <p>Success</p>
-        <h1>897</h1>
+        <h1 id="emailSuccess">{{ datiCardReport["success"] }}</h1>
       </div>
       <div class="cardReportDetail">
         <i class="fa-solid fa-circle-check imgCardReport" style="color: #1cad34"></i>
@@ -21,7 +21,7 @@
     <div class="cardReport normal">
       <div class="cardReportDetail">
         <p>Email</p>
-        <h1>992</h1>
+        <h1>{{ datiCardReport["total"] }}</h1>
       </div>
       <div class="cardReportDetail">
         <i class="fa-solid fa-envelope imgCardReport" style="color: #b4b8b8"></i>

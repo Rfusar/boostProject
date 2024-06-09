@@ -1,5 +1,10 @@
 const ctxLine = document.querySelector("#chartLine");
 
+
+window.addEventListener("resize", ()=>{
+  document.querySelector("#containerChartLine").style.width = window.innerWidth/1.6+"px"  
+});
+
 (async ()=>{
   let res = await fetch("/datiGrafico", {method: "POST"})
   res = await res.json()

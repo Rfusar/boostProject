@@ -1,14 +1,11 @@
-const btnCorners = document.querySelector("#btnChangeCorners")
-
 function setCorners(){
-  const d = document.documentElement.style
   if(getCookie("corners") == "pointed"){
-    d.setProperty("--radius-20", "0")
-    d.setProperty("--radius-10", "0")
+    allStyle.setProperty("--radius-20", "0")
+    allStyle.setProperty("--radius-10", "0")
   }
   else if(getCookie("corners") == "round"){
-    d.setProperty("--radius-20", "20px")
-    d.setProperty("--radius-10", "10px")
+    allStyle.setProperty("--radius-20", "20px")
+    allStyle.setProperty("--radius-10", "10px")
   }
 }
 
@@ -21,6 +18,8 @@ btnCorners.addEventListener("click", function(){
     this.setAttribute("corners", "round")
     setCookie("corners", "round")
   }
+  for(const c of all){c.style.transition="1s"}
+  for(const c of document.querySelectorAll(".animate")){c.style.transition="300ms"}
   setCorners()
 })
 

@@ -9,7 +9,10 @@
       ],
       datasets: [{
         label: 'Status Printer',
-        data: [300, 50],
+        data: [
+          Number(document.querySelector("#emailSuccess").textContent), 
+          Number(document.querySelector("#emailError").textContent)
+        ],
         backgroundColor: [
           "#3cff00",
           "#ff000d",

@@ -12,7 +12,12 @@ nav{
 #custom{
   position: absolute;
   left: 50px;
-  color: var(--text-base1)
+  color: var(--text-base1);
+}
+#changeUser{
+  position: absolute;
+  left 70px;
+  color: var(--text-base1);
 }
 .btnChange:hover{
   background-color: var(--sidebar-hover);
