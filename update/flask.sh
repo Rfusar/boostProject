@@ -2,7 +2,7 @@
 
 flaskUpdate(){
   dir="/home/riccardo/Scrivania/tool/creaProgetto/standard/stili/dashboard"
-  dirTemp="/home/riccardo/Scrivania/esperimenti/testUpdate/dashboard"
+  dirTemp="/home/riccardo/Scrivania/esperimenti/testUpdate12/dashboard"
   mkdir -p "$dirTemp"
   cd "$dirTemp"
 
@@ -25,6 +25,7 @@ flaskUpdate(){
   ln -s "$dir/home/home.css" "./static/css/pages"
   ln -s "$dir/home/home.html" "./templates"
   ln -s "$dir/home/home.js" "./static/js/pages"
+  ln -s "$dir/users/users.html" "./templates"
 
   #Componenti
   ln -s "$dir/componenti/navbar/navbar.html" "./templates/componenti"
@@ -32,8 +33,11 @@ flaskUpdate(){
   ln -s "$dir/componenti/sidebar/sidebar.html" "./templates/componenti"
   ln -s "$dir/componenti/sidebar/sidebar.css" "./static/css/componenti"
   ln -s "$dir/componenti/main/home.html" "./templates/componenti/main"
+  ln -s "$dir/componenti/main/users.html" "./templates/componenti/main"
   ln -s "$dir/componenti/table/home.html" "./templates/componenti/table"
   ln -s "$dir/componenti/table/table.css" "./static/css/componenti"
+  ln -s "$dir/componenti/table/tablePage.css" "./static/css/componenti"
+  ln -s "$dir/componenti/table/table.js" "./static/js/componenti"
 
   #Plugin
   ln -s "$dir/charts/line.js" "./static/js/charts"
@@ -50,6 +54,7 @@ flaskUpdate(){
   ln -s "$dir/Flask/applicazione/routes/dati.py" "./applicazione/routes"
   ln -s "$dir/Flask/applicazione/routes/pagine.py" "./applicazione/routes"
   ln -s "$dir/Flask/applicazione/DB.py" "./applicazione"
+  ln -s "$dir/Flask/applicazione/users.json" "./applicazione"
   ln -s "$dir/Flask/server.py" "."
  
   ln -s "$dir/index.css" "./static/css"
