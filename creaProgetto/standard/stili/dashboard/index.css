@@ -1,24 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-:root{
-  --bg-base1: #fff;
-  --bg-base2: #0253f5;
-  --bg-base3: #edf2ef;
-  --text-base1: #000;
-
-  --bg-cardReport: #fff;
-  --text-cardReport: blue;
-  --sidebar-hover: #fff3;
-  --sidebar-border: yellow;
-
-  --radius-20: 20px;
-  --radius-10: 10px;
-}
 *{
   box-sizing: border-box;
-  transition: .7s;
   margin: 0;
   padding: 0;
+  transition: 1s;
 }
 body{
   font-size: 16px;

@@ -54,6 +54,8 @@ flaskUpdate(){
  
   ln -s "$dir/index.css" "./static/css"
   ln -s "$dir/componenti/head.html" "./templates/componenti"
+  ln -s "$dir/cookie.js" "./static/js"
+  ln -s "$dir/index.js" "./static/js"
 
   #Altri file
   ln -s "/home/riccardo/Scrivania/tool/creaProgetto/standard/run/Flask.sh" "."

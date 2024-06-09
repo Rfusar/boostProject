@@ -1,11 +1,9 @@
-document.querySelector("#btnChangeColors").addEventListener("click", function(){
-  const d = document.documentElement.style
-  
-  console.log("ciao")
+const btnColors = document.querySelector("#btnChangeColors")
 
-  if(this.getAttribute("colors") == "light"){
-    this.setAttribute("colors", "dark")
-    this.textContent = "Dark"
+function setColors(){
+  const d = document.documentElement.style
+  if(getCookie("colors") == "dark"){
+    btnColors.textContent = "Dark"
 
     d.setProperty("--bg-base1", "#0f0f0f") 
     d.setProperty("--bg-base2", "#131414")
@@ -16,9 +14,8 @@ document.querySelector("#btnChangeColors").addEventListener("click", function(){
     d.setProperty("--text-cardReport", "#fff")
     d.setProperty("--text-base1", "#fff")
   }
-  else if(this.getAttribute("colors") == "dark"){
-    this.setAttribute("colors", "light")
-    this.textContent = "Light"
+  else if(getCookie("colors") == "light"){
+    btnColors.textContent = "Light"
 
     d.setProperty("--bg-base1", "#fff") 
     d.setProperty("--bg-base2", "#0253f5")
@@ -27,6 +24,18 @@ document.querySelector("#btnChangeColors").addEventListener("click", function(){
     d.setProperty("--sidebar-border", "yellow")
     d.setProperty("--bg-cardReport", "#fff")
     d.setProperty("--text-base1", "#000")
-
   }
+}
+
+setColors()
+btnColors.addEventListener("click", function(){
+  if(this.getAttribute("colors") =="light"){
+    this.setAttribute("colors", "dark")
+    setCookie("colors", "dark")
+  }
+  else if(this.getAttribute("colors")=="dark"){
+    this.setAttribute("colors", "light")
+    setCookie("colors", "light")
+  }
+  setColors()
 })
