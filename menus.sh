@@ -73,3 +73,30 @@ continuaProgetto(){
   echo ""
   echo ""
 }
+
+menuStudio(){
+  clear
+  echo "===================================" 
+  echo "|                                 |"
+  echo "|       Cosa vuoi studiare?       |"
+  echo "|                                 |"
+  echo "===================================" 
+  echo ""
+  echo "      1. bash"
+  echo "      2. microsoft"
+  echo ""
+  echo ""
+}
+
+
+menuHelp(){
+  clear
+  echo "Sintassi TOOL:"
+  echo ""
+  echo "TOOL                menu tool"
+  echo "TOOL update         aggiorna un template"
+  echo "TOOL github         push si repository github"
+  echo "TOOL studio         studia un argomento"
+  echo ""
+  echo ""
+}

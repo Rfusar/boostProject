@@ -13,7 +13,7 @@ if [ -z "$1" ]; then
       creaProgetto
       read -p ": " res
       case "$res" in 
-        "1m"). ./creaProgetto/dashboard.sh ;;
+        "1m") . ./creaProgetto/dashboard.sh ;;
       esac
       break
 
@@ -30,5 +30,13 @@ elif [ "$1" == "update" ]; then
     
 elif [ "$1" == "github" ]; then 
   github
+
+elif [ "$1" == "help" ]; then
+  menuHelp
+
+elif [ "$1" == "studio" ]; then
+  menuStudio 
+  read -p ": " argomento
+  . ./studio.sh "$argomento"
 
 fi
