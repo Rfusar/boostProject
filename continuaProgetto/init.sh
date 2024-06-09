@@ -14,7 +14,6 @@ for p in "${progetti[@]}"; do
     break
   fi
 done
-
 route=$(pathProgetti "$res")
 
 cd $route

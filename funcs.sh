@@ -4,14 +4,15 @@ source ./menus.sh
 source ./update/flask.sh
 
 pathProgetti(){
-for file in pathProject/*; do
-    if grep -q "$searchString" "$file"; then
+  for file in pathProject/*
+  do
+    if [ "pathProject/$1.txt" == "$file" ]
+    then
       route=$(cat "$file")
+      echo "$route"
       break  
     fi
   done
-
-  echo "$route"
 }
 
 update(){
