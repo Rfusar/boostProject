@@ -1,0 +1,27 @@
+#dataTable{
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--radius-20);
+}
+#tablePrinterError{
+  margin-top: 20px;
+}
+#tablePrinterError h1{
+  color: var(--text-base1)
+}
+#dataTable thead{
+  background-color: var(--bg-base2);
+  color: #fff;
+}
+
+#dataTable thead tr th{
+  padding: 5px;
+}
+
+#dataTable tbody tr td{
+  background-color: var(--bg-base1);
+  color: var(--text-base1);
+  text-align: center;
+  padding: 10px;
+}
+

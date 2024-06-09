@@ -1,1 +1,0 @@
-/home/riccardo/Scrivania/tool/creaProgetto/run/Flask.sh

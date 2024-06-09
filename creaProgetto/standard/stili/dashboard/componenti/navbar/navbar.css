@@ -3,12 +3,31 @@ nav{
   align-items: center;
   position: relative;
 }
-#btnChangeColors{
-  position: absolute;
-  left: 20px;
+.btnChange{
   padding: 5px 10px;
-  outline: none;
-  border: none;
-  background-color: blue;
-  color: #fff;
+  background-color: var(--bg-base1);
+  color: var(--text-base1);
+  font-size: .8rem;
+}
+#custom{
+  position: absolute;
+  left: 50px;
+  color: var(--text-base1)
+}
+.btnChange:hover{
+  background-color: var(--sidebar-hover);
+}
+#menuCustom{
+  position: absolute;
+  background-color: var(--bg-base1);
+  color: var(--text-base1);
+  border-radius: var(--radius-10);
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 4px 5px #000;
+  overflow: hidden;
+  font-size: .8rem;
+  left: 10px;
 }

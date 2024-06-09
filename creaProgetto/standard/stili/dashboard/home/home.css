@@ -7,7 +7,7 @@
 }
 .cardReport{
   flex: 1;
-  border-radius: 20px;
+  border-radius: var(--radius-20);
   padding: 20px;
   background-color: var(--bg-cardReport);
   color: var(--text-base1);
@@ -34,7 +34,7 @@
   font-style: italic;
 }
 .cardReportDetail p{
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .imgCardReport{
@@ -42,79 +42,3 @@
   font-size: 2rem;
   right: 10px;
 }
-
-
-
-
-/*charts*/
-#containerDati{
-  margin-top: 30px;
-  width: 100%;
-  height: 30%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-#containerChartLine,
-#containerChartPie{
-  padding: 20px;
-  border-radius: 20px;
-}
-#containerChartLine{
-  height: 350px; 
-  width: 1000px;
-  background-color: var(--bg-base1);
-  position: relative;
-}
-#containerChartPie{ 
-  background-color: var(--bg-base1);
-}
-#chartLine{
-  height: 100%;
-  width: 100%;
-}
-#menuChart{
-  position: absolute;
-  background-color: var(--bg-base1);
-  color: var(--text-base1);
-  border-radius: 10px;
-  opacity: 0;
-  pointer-events: none;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 3px 5px 10px #000;
-  overflow: hidden;
-  font-size: .8rem;
-}
-#btnMenuChart{
-  color: var(--text-base1)
-}
-.btnChart{
-  padding: 15px;
-  transition: 200ms;
-}
-.btnChart:hover{
-  background-color: var(--sidebar-hover);
-}
-
-
-/*table*/
-#dataTable{
-  width: 100%;
-  border-collapse: collapse
-}
-#dataTable thead{
-  background-color: var(--bg-base2);
-  color: #fff;
-}
-
-#dataTable thead tr th{
-  padding: 5px;
-}
-
-#dataTable tbody tr td{
-  background-color: var(--bg-base1);
-  text-align: center;
-  padding: 10px;
-}
-

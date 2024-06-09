@@ -1,11 +1,11 @@
 const btnMenu = document.querySelector("#btnMenuChart")
-const menu = document.querySelector("#menuChart")
+const menuChart = document.querySelector("#menuChart")
 
-let attivo = null
+let attivoChart = null
 btnMenu.addEventListener("mouseenter", ()=>{
-  attivo=true
-  if(attivo){
-    menu.animate([
+  attivoChart=true
+  if(attivoChart){
+    menuChart.animate([
         {
           opacity: 0,
           top: "70px"
@@ -22,10 +22,10 @@ btnMenu.addEventListener("mouseenter", ()=>{
     })
   }
 })
-menu.addEventListener("mouseleave", ()=>{
-  attivo=false
-  if(!attivo){
-    menu.animate([
+menuChart.addEventListener("mouseleave", ()=>{
+  attivoChart=false
+  if(!attivoChart){
+    menuChart.animate([
         {
           opacity: 1,
           top: "50px"

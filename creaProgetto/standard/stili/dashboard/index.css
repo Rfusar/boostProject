@@ -10,6 +10,9 @@
   --text-cardReport: blue;
   --sidebar-hover: #fff3;
   --sidebar-border: yellow;
+
+  --radius-20: 20px;
+  --radius-10: 10px;
 }
 *{
   box-sizing: border-box;

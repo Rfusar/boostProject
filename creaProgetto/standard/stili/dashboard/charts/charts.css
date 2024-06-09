@@ -1,0 +1,50 @@
+#containerDati{
+  margin-top: 30px;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#containerChartLine,
+#containerChartPie{
+  padding: 5px 10px;
+  border-radius: var(--radius-10);
+}
+#containerChartLine{
+  height: 350px; 
+  width: 1000px;
+  background-color: var(--bg-base1);
+  position: relative;
+}
+#containerChartPie{ 
+  background-color: var(--bg-base1);
+}
+#chartLine{
+  height: 100%;
+  width: 100%;
+}
+#menuChart{
+  position: absolute;
+  background-color: var(--bg-base1);
+  color: var(--text-base1);
+  border-radius: var(--radius-10);
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 5px 10px #000;
+  overflow: hidden;
+  font-size: .8rem;
+}
+#btnMenuChart{
+  color: var(--text-base1)
+}
+.btnChart{
+  padding: 15px;
+  transition: 200ms;
+}
+.btnChart:hover{
+  background-color: var(--sidebar-hover);
+}
+

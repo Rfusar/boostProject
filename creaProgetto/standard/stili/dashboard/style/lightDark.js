@@ -1,11 +1,11 @@
 document.querySelector("#btnChangeColors").addEventListener("click", function(){
   const d = document.documentElement.style
   
+  console.log("ciao")
+
   if(this.getAttribute("colors") == "light"){
     this.setAttribute("colors", "dark")
     this.textContent = "Dark"
-    this.style.backgroundColor = "#fff"
-    this.style.color = "#000"
 
     d.setProperty("--bg-base1", "#0f0f0f") 
     d.setProperty("--bg-base2", "#131414")
@@ -16,11 +16,9 @@ document.querySelector("#btnChangeColors").addEventListener("click", function(){
     d.setProperty("--text-cardReport", "#fff")
     d.setProperty("--text-base1", "#fff")
   }
-  else{
+  else if(this.getAttribute("colors") == "dark"){
     this.setAttribute("colors", "light")
     this.textContent = "Light"
-    this.style.backgroundColor = "blue"
-    this.style.color = "#fff"
 
     d.setProperty("--bg-base1", "#fff") 
     d.setProperty("--bg-base2", "#0253f5")
