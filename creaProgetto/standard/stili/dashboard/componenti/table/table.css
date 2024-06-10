@@ -19,7 +19,6 @@
 }
 
 #dataTable tbody tr td{
-  background-color: var(--bg-base1);
   color: var(--text-base1);
   text-align: center;
   padding: 10px;

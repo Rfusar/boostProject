@@ -1,14 +1,56 @@
 <main id="main">
-  <table id="tablePage">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Surname</th>
-        <th>Role</th>
-        <th>Company</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody id="tbody"></tbody>
-  </table>
+  <div id="cardTablePage">
+    <div>
+      <select id="rowForPage">
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+    
+      <input type="text" placeholder="Search..." id="search"/>
+    </div>
+    <table id="tablePage">
+      <thead>
+        <tr>
+          <th class="titoli">Name</th>
+          <th class="titoli">Surname</th>
+          <th class="titoli">Company</th>
+          <th class="titoli">Role</th>
+          <th class="titoli">Action</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+      {% for u in users %}
+        <tr class="rowTable">
+          <td>{{u["name"].split(" ")[0]}}</td>
+          <td>{{u["name"].split(" ")[1]}}</td>
+          <td>{{u["company"]}}</td>
+          {% if u["role"] == "admin" %}
+            <td>
+              <abbr title="Admin">
+              <i class="fa-solid fa-user-shield"></i>
+              </abbr>
+            </td>
+          {% elif u["role"] == "user" %}
+            <td>
+              <abbr title="User">
+                <i class="fa-solid fa-user"></i>
+              </abbr>
+            </td>
+          {%endif%}
+          <td>
+            <div>
+              <i class="fa-solid fa-user-secret iconTablePage pointer" id="impersonifica"></i>
+              <i class="fa-solid fa-up-right-from-square iconTablePage pointer"></i>
+            </div>
+          </td>
+        </tr>
+      {%endfor%}
+      </tbody>
+    </table>
+    <div>
+      <div id="btnsPagine"></div>
+    </div>
+  <div>
 </main>

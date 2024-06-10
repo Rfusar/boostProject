@@ -1,5 +1,21 @@
 [
   {
+    "_id": "6235f47e54hsubcb40e9de1a",
+    "name": "Admin admin",
+    "email": "admin@email.com",
+    "company": "nemesisag",
+    "role": "admin",
+    "password": "admin123"
+  },
+  {
+    "_id": "hsu2737e54hsubcb40e9de1a",
+    "name": "User user",
+    "email": "utente@email.com",
+    "company": "nemesisag",
+    "role": "user",
+    "password": "utente"
+  },
+  {
     "_id": "6665f47e54316bcb40e9de1a",
     "name": "Flores Whitfield",
     "email": "floreswhitfield@colaire.com",

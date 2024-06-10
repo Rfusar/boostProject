@@ -26,6 +26,7 @@ flaskUpdate(){
   ln -s "$dir/home/home.html" "./templates"
   ln -s "$dir/home/home.js" "./static/js/pages"
   ln -s "$dir/users/users.html" "./templates"
+  ln -s "$dir/otherPage1/process.html" "./templates"
 
   #Componenti
   ln -s "$dir/componenti/navbar/navbar.html" "./templates/componenti"
@@ -34,6 +35,7 @@ flaskUpdate(){
   ln -s "$dir/componenti/sidebar/sidebar.css" "./static/css/componenti"
   ln -s "$dir/componenti/main/home.html" "./templates/componenti/main"
   ln -s "$dir/componenti/main/users.html" "./templates/componenti/main"
+  ln -s "$dir/componenti/main/process.html" "./templates/componenti/main"
   ln -s "$dir/componenti/table/home.html" "./templates/componenti/table"
   ln -s "$dir/componenti/table/table.css" "./static/css/componenti"
   ln -s "$dir/componenti/table/tablePage.css" "./static/css/componenti"
@@ -48,6 +50,7 @@ flaskUpdate(){
   ln -s "$dir/style/menu.js" "./static/js/style"
   ln -s "$dir/style/corners.js" "./static/js/style"
   ln -s "$dir/style/lightDark.js" "./static/js/style"
+  ln -s "$dir/impersonifica.js" "./static/js"
 
   #Server
   ln -s "$dir/Flask/applicazione/routes/user.py" "./applicazione/routes"
@@ -55,12 +58,14 @@ flaskUpdate(){
   ln -s "$dir/Flask/applicazione/routes/pagine.py" "./applicazione/routes"
   ln -s "$dir/Flask/applicazione/DB.py" "./applicazione"
   ln -s "$dir/Flask/applicazione/users.json" "./applicazione"
+  ln -s "$dir/Flask/applicazione/status_printer.json" "./applicazione"
   ln -s "$dir/Flask/server.py" "."
  
   ln -s "$dir/index.css" "./static/css"
   ln -s "$dir/componenti/head.html" "./templates/componenti"
   ln -s "$dir/cookie.js" "./static/js"
   ln -s "$dir/index.js" "./static/js"
+  ln -s "$dir/colors.js" "./static/js"
 
   #Altri file
   ln -s "/home/riccardo/Scrivania/tool/creaProgetto/standard/run/Flask.sh" "."

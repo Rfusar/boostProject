@@ -17,12 +17,15 @@ def RicercaAuto():
         "Line": datiLine 
     })
 
-@dati.route("/datiTabella", methods=["POST"])
-def datiTabella():
+
+@dati.route("/funcs")
+def funcs():
     if not inSessione(): return jsonify({"res": "non hai il permesso"}), 403
-    if request.json.get("element") == "users":
-        for d in datiTabellaUsers:
-            if "password" in d.keys():
-                d.pop("password")
+    if session.get("utente") == "admin":
+        dati = {k:v for k,v in request.json.items()}
+        if dati["action"] == "impersonifica":
+            ...
+
+    else:
+        return jsonify({"res": "non sei autorizzato"}), 403
         
-        return jsonify({"users": datiTabellaUsers})

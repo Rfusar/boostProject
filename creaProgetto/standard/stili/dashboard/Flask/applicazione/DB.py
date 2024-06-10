@@ -1,26 +1,19 @@
 from flask import session
 import json
 
-USERS= [
-    {
-        "email": "admin@email.com",
-        "password": "admin123",
-        "ruolo": "admin",
-    },
-    {
-        "email": "utente@email.com",
-        "password": "utente",
-        "ruolo": "user",
-    }
-]
-
 with open("applicazione/users.json") as f: 
     datiTabellaUsers = json.loads(f.read())
 
+with open("applicazione/status_printer.json") as f: 
+    statusPrinter = json.loads(f.read())
+
 def createSessione(dati):
     session["utente"] = {
+        "_id": dati["_id"],
+        "name": dati["name"],
         "email": dati["email"],
-        "ruolo": dati["ruolo"],
+        "company": dati["company"],
+        "role": dati["role"],
     }
 
 

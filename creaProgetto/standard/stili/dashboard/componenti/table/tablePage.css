@@ -1,8 +1,27 @@
+#cardTablePage{
+  margin: 50px 30px;
+}
+#rowForPage{
+  border-radius: var(--radius-20);
+  background-color: var(--bg-base2);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+}
+#search{
+  padding: 5px 10px;
+  background-color: var(--bg-base2);
+  color: #fff;
+  border-radius: var(--radius-20);
+  outline: none;
+  border: none;
+}
+
 #tablePage{
-  width: 100%;
+  width: 90%;
   max-height: 80%;
   border-collapse: collapse;
-  margin: 30px;
+  margin: 10px 0;
 }
 #tablePage thead tr th{
   background-color: var(--bg-base2); 
@@ -11,8 +30,19 @@
 }
 
 #tablePage tbody tr td{
-  padding: 10px;
+  padding: 15px;
   text-align: center;
-  background-color: var(--bg-base1);
   color: var(--text-base1);
+}
+
+.btnPagina{
+  padding: 10px;
+  font-size: 1rem;
+  background-color: var(--bg-base2);
+  color: #fff;
+  border: none; 
+}
+
+.iconTablePage{
+  margin-left: 15px;
 }

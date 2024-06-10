@@ -9,6 +9,10 @@ function setColors(){
     allStyle.setProperty("--bg-cardReport", "#131414")
     allStyle.setProperty("--text-cardReport", "#fff")
     allStyle.setProperty("--text-base1", "#fff")
+    allStyle.setProperty("--lineTable0", "#0f0f0f")
+    allStyle.setProperty("--lineTable1", "#131414")
+    allStyle.setProperty("--lineTable1", "#131414")
+    allStyle.setProperty("--table-hover", "#0c1536")
   }
   else if(getCookie("colors") == "light"){
     btnColors.textContent = "Light"
@@ -20,6 +24,9 @@ function setColors(){
     allStyle.setProperty("--sidebar-border", "yellow")
     allStyle.setProperty("--bg-cardReport", "#fff")
     allStyle.setProperty("--text-base1", "#000")
+    allStyle.setProperty("--lineTable0", "#fff")
+    allStyle.setProperty("--lineTable1", "#d4d6d5")
+    allStyle.setProperty("--table-hover", "#b6c6fa")
   }
 }
 
@@ -35,6 +42,7 @@ btnColors.addEventListener("click", function(){
   }
   for(const c of all){c.style.transition="1s"}
   for(const c of document.querySelectorAll(".animate")){c.style.transition="300ms"}
+  for(const c of document.querySelectorAll(".animate0")){c.style.transition="0ms"}
 
   setColors()
 })

@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% include "componenti/head.html" %}
-    <link rel="stylesheet" href="/static/css/pages/home.css">
-    <link rel="stylesheet" href="/static/css/componenti/charts.css">
-    <link rel="stylesheet" href="/static/css/componenti/table.css">
     <link rel="stylesheet" href="/static/css/componenti/tablePage.css">
   </head>
   <body>
@@ -16,14 +13,10 @@
         {% include "componenti/sidebar.html" %}
       <div id="display">
         {% include "componenti/navbar.html" %}
-        {% include "componenti/main/home.html" %}
+        {% include "componenti/main/process.html" %}
       </div>
     </section>
  
-    <script defer src="/static/js/pages/home.js"></script>
-    <script defer src="/static/js/charts/line.js"></script>
-    <script defer src="/static/js/charts/pie.js"></script>
-    <script defer src="/static/js/charts/menu.js"></script>
     <script defer src="/static/js/componenti/table.js"></script>
   </body>
 </html>

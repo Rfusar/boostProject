@@ -3,11 +3,12 @@
 case "$1" in 
   "1")
     link="https://diraimondo.dmi.unict.it/wp-content/uploads/classes/so/mirror-stuff/abs-guide.pdf"
-    pag=106
+    pag=167
     ;;
   "2")
     link="https://learn.microsoft.com/it-it/training/?source=learn"
     pag=0
+    ;;
 esac
 
 if [ $pag -gt 0 ]; then

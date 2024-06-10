@@ -69,6 +69,7 @@ cat "$ps/cookie.js" > static/js/cookie.js
 cat "$ps/style/corners.js" > static/js/style/corners.js
 cat "$ps/style/lightDark.js" > static/js/style/lightDark.js
 cat "$ps/style/menu.js" > static/js/style/menu.js
+cat "$ps/impersonifica.js" > static/js/impersonifica.js
 
 #Server
 cat "$ps/Flask/applicazione/DB.py" > applicazione/DB.py

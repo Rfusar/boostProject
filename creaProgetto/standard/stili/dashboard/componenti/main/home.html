@@ -30,6 +30,8 @@
   </section>
 
   <section>
+
+
     <div id="containerDati">
       <div id="containerChartLine">
         <div>
@@ -39,14 +41,59 @@
           <span id="oggiChartLine" class="btnChart pointer">Oggi</span>
           <span id="questaSettimanaChartLine" class="btnChart pointer">Questa settimana</span>
         </div>
-    
       <canvas id="chartLine"></canvas>
       </div>
       <div id="containerChartPie">
         <canvas id="chartPie"></canvas>
       </div>
     </div>
-    {% include "componenti/table/home.html" %}
+    
+
+
+
+
+
+    <div id="cardTablePage">
+      <div>
+        <select id="rowForPage">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+    
+        <input type="text" placeholder="Search..." id="search"/>
+      </div>
+      <table id="tablePage">
+        <thead>
+          <tr>
+            <th class="titoli">Send time</th>
+            <th class="titoli">Sender</th>
+            <th class="titoli">Reciever</th>
+            <th class="titoli">Subject</th>
+            <th class="titoli">Status</th>
+            <th class="titoli">Action</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          {% for u in users %}
+          <tr class="rowTable">
+            <td>{{u["send_time"]}}</td>
+            <td>{{u["sender"]}}</td>
+            <td>{{u["reciever"]}}</td>
+            <td>{{u["subject"]}}</td>
+            <td><span class="type">{{u["status"]}}</span></td>
+            <td>
+                <i class="fa-solid fa-up-right-from-square iconTablePage pointer"></i>
+            </td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+      <div>
+        <div id="btnsPagine"></div>
+      </div>
+    <div>
   </section>
 
 
