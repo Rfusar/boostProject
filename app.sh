@@ -1,6 +1,6 @@
 #!/bin/bash
-source ./menus.sh
-source ./funcs.sh
+source ./app/menus.sh
+source ./app/funcs.sh
 workTOOL="/home/riccardo/Scrivania/tool"
 
 
@@ -30,7 +30,7 @@ elif [ "$1" == "update" ]; then
 
     
 elif [ "$1" == "github" ]; then 
-  . ./github.sh
+  . ./app/github.sh
 
 elif [ "$1" == "help" ]; then
   menuHelp
@@ -38,6 +38,6 @@ elif [ "$1" == "help" ]; then
 elif [ "$1" == "studio" ]; then
   menuStudio 
   read -p ": " argomento
-  . ./studio.sh "$argomento"
+  . ./app/studio.sh "$argomento"
 
 fi

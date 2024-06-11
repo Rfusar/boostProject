@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./menus.sh
+source ./app/menus.sh
 percorso="/home/riccardo/Scrivania/esperimenti"
 ps="/home/riccardo/Scrivania/tool/creaProgetto/standard/stili/dashboard"
 rf="$ps/Flask/applicazione/routes"

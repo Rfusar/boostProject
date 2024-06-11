@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./menus.sh
+source ./app/menus.sh
 
 continuaProgetto
 read -p ": " progetto

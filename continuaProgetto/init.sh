@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source ./menus.sh
-source ./funcs.sh
+source ./app/menus.sh
+source ./app/funcs.sh
 
 continuaProgetto
 read -p ": " res

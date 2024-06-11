@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./menus.sh
+source ./app/menus.sh
 
 pathProgetti(){
   for file in pathProject/*
