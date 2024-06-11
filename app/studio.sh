@@ -9,6 +9,10 @@ case "$1" in
     link="https://learn.microsoft.com/it-it/training/?source=learn"
     pag=0
     ;;
+  "3")
+    link="https://people.dm.unipi.it/martelli/Alg%20Lin.pdf"
+    pag=0
+    ;;
 esac
 
 if [ $pag -gt 0 ]; then
