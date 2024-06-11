@@ -29,7 +29,7 @@ elif [ "$1" == "update" ]; then
 
     
 elif [ "$1" == "github" ]; then 
-  github
+  . ./github.sh
 
 elif [ "$1" == "help" ]; then
   menuHelp
