@@ -1,0 +1,19 @@
+#!/bin/bash
+dir="/home/riccardo/Scrivania/tool/creaProgetto/standard/stili/API"
+dirTemp="/home/riccardo/Scrivania/esperimenti/updateFastAPI"
+
+mkdir -p "$dirTemp"
+cd "$dirTemp"
+
+mkdir -p services/routes 
+
+ln -s "$dir/services/routes/A.py" "./services/routes"
+ln -s "$dir/services/classeA.py" "./services"
+ln -s "$dir/services/cookie.py" "./services"
+ln -s "$dir/server.py" "."
+
+ln -s "/home/riccardo/Scrivania/tool/creaProgetto/standard/run/FastAPI.sh" "."
+
+virtualenv venv
+source venv/bin/activate
+pip install fastapi fastapi-sessions

@@ -3,7 +3,7 @@
 case "$1" in 
   "1")
     link="https://diraimondo.dmi.unict.it/wp-content/uploads/classes/so/mirror-stuff/abs-guide.pdf"
-    pag=204
+    pag=353
     ;;
   "2")
     link="https://learn.microsoft.com/it-it/training/?source=learn"

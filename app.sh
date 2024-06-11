@@ -13,7 +13,8 @@ if [ -z "$1" ]; then
       creaProgetto
       read -p ": " res
       case "$res" in 
-        "1m") . ./creaProgetto/dashboard.sh ;;
+        "1m") . ./creaProgetto/dashboard.sh;;
+        "2m") . ./creaProgetto/api.sh;;
       esac
       break
 
