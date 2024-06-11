@@ -41,6 +41,7 @@ cat "$ps/home/home.html" > templates/home.html
 cat "$ps/home/home.css" > static/css/pages/home.css
 cat "$ps/home/home.js" > static/js/pages/home.js
 cat "$ps/users/users.html" > templates/users.html
+cat "$ps/otherPage1/process.html" > templates/users.html
 
 #Componenti
 cat "$ps/componenti/navbar/navbar.html" > templates/componenti/navbar.html
@@ -49,6 +50,7 @@ cat "$ps/componenti/sidebar/sidebar.html" > templates/componenti/sidebar.html
 cat "$ps/componenti/sidebar/sidebar.css" > static/css/componenti/sidebar.css
 cat "$ps/componenti/main/home.html" > templates/componenti/main/home.html
 cat "$ps/componenti/main/users.html" > templates/componenti/main/users.html
+cat "$ps/componenti/main/process.html" > templates/componenti/main/process.html
 
 cat "$ps/componenti/table/home.html" > templates/componenti/table/home.html
 cat "$ps/componenti/table/table.js" > static/js/componenti/table.js
@@ -66,6 +68,7 @@ cat "$ps/charts/menu.js" > static/js/charts/menu.js
 cat "$ps/charts/charts.css" > static/css/componenti/charts.css
 
 cat "$ps/cookie.js" > static/js/cookie.js
+cat "$ps/colors.js" > static/js/colors.js
 cat "$ps/style/corners.js" > static/js/style/corners.js
 cat "$ps/style/lightDark.js" > static/js/style/lightDark.js
 cat "$ps/style/menu.js" > static/js/style/menu.js
@@ -77,6 +80,7 @@ cat "$rf/dati.py" > applicazione/routes/dati.py
 cat "$rf/pagine.py" > applicazione/routes/pagine.py
 cat "$rf/user.py" > applicazione/routes/user.py
 cat "$ps/Flask/applicazione/users.json" > applicazione/users.json
+cat "$ps/Flask/applicazione/status_printer.json" > applicazione/status_printer.json
 cat "$ps/Flask/server.py" > server.py
     
 #Altro

@@ -2,7 +2,7 @@
 
 flaskUpdate(){
   dir="/home/riccardo/Scrivania/tool/creaProgetto/standard/stili/dashboard"
-  dirTemp="/home/riccardo/Scrivania/esperimenti/testUpdate12/dashboard"
+  dirTemp="/home/riccardo/Scrivania/esperimenti/testUpdate/dashboard"
   mkdir -p "$dirTemp"
   cd "$dirTemp"
 
