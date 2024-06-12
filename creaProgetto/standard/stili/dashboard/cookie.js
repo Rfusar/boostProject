@@ -17,7 +17,10 @@ function getCookie(name) {
   return false;
 }
 
+//Set transition
 for(const c of all){c.style.transition="0"}
+
+
 const btnCorners = document.querySelector("#btnChangeCorners")
 const btnColors = document.querySelector("#btnChangeColors")
 
@@ -33,4 +36,6 @@ if(!getCookie("corners")){
   setCookie("corners", "round")
 }
 else{btnCorners.setAttribute("corners", getCookie("corners"))}
+
+
 

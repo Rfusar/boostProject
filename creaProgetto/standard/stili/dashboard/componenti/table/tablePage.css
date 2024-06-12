@@ -46,3 +46,45 @@
 .iconTablePage{
   margin-left: 15px;
 }
+
+
+.btnFiltro{
+  border-radius: var(--radius-10);
+  margin-left: 30px;
+  padding: 5px;
+  border: none;
+}
+.btnFiltro:hover{
+  transform: translateY(-1px)
+}
+#filtroSuccess{
+  background-color: var(--bg-success-status);
+  color: var(--text-success-status)
+}
+#filtroProgress{
+  background-color: var(--bg-progress-status);
+  color: var(--text-progress-status)
+}
+#filtroError{
+  background-color: var(--bg-error-status);
+  color: var(--text-error-status)
+}
+
+.actionMenu{
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0 10px 5px;
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  right: 60px;
+  width: 150px;
+  background-color: var(--bg-base3);
+  color: var(--text-base1);
+  border-radius: var(--radius-10);
+}
+.itemActionMenu{
+  width: max-content;
+}

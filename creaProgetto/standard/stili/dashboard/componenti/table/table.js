@@ -16,33 +16,36 @@ function setColorsRowsTable(datiFiltrati){
     e.style.backgroundColor = i%2 == 0 ? "var(--lineTable0)" : "var(--lineTable1)"
   })
 }
+
+
 for(const d of document.querySelectorAll(".type")){
   let bg = null
   let text = null
   switch(d.textContent){
     case "EML":
     case "PDF":
-      bg = colors["red"]["bg"]
-      text = colors["red"]["text"]
+      d.style.backgroundColor = "var(--bg-error-status)" 
+      d.style.color = "var(--text-error-status)"
       break
     case "printed":
-      bg = colors["green"]["bg"]
-      text = colors["green"]["text"]
+      d.style.backgroundColor = "var(--bg-success-status)" 
+      d.style.color = "var(--text-success-status)"
       break
     case "await":
-      bg = colors["yellow"]["bg"]
-      text = colors["yellow"]["text"]
+      d.style.backgroundColor = "var(--bg-progress-status)" 
+      d.style.color = "var(--text-progress-status)"
       break
   }
   Object.assign(d.style, {
-    backgroundColor: bg,
-    color: text,
     fontWeight: 800,
     padding: "5px",
-    borderRadius: "7px"
+    borderRadius: "var(--radius-10)"
 
   })
 }
+
+
+
 setColorsRowsTable(dati)
 Impaginazione(dati, campi, 10)
 
@@ -91,11 +94,12 @@ function Impaginazione(items, campi, rows){
   tbody.innerHTML=""
   const pagina = []
   const ultimaPage = items.length%rows
-  for(let i = 0; i < items.length; i++){
-    if (pagina.length < rows-1){
+  for(let i = 0; i <= items.length; i++){
+    if (pagina.length < rows){
       pagina.push(items[i])
     }
     else{
+      i--
       pagine.push(pagina.slice())
       pagina.length = 0
     }

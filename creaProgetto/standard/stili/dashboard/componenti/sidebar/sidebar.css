@@ -16,7 +16,6 @@
   padding: 20px;
   color: #fff;
   list-style: none;
-  transition: 300ms;
   border-left: 3px solid var(--bg-base2);
 }
 #sidebar ul li:hover{

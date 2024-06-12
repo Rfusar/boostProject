@@ -9,6 +9,11 @@
       </select>
     
       <input type="text" placeholder="Search..." id="search"/>
+
+      <button id="filtroError" class="btnFiltro pointer animate">Error</button>
+      <button id="filtroProgress" class="btnFiltro pointer animate">Progerss</button>
+      <button id="filtroSuccess" class="btnFiltro pointer animate">Success</button>
+
     </div>
     <table id="tablePage">
       <thead>
@@ -29,8 +34,13 @@
           <td>{{u["reciever"]}}</td>
           <td>{{u["subject"]}}</td>
           <td><span class="type">{{u["status"]}}</span></td>
-          <td>
-              <i class="fa-solid fa-up-right-from-square iconTablePage pointer"></i>
+          <td style="position: relative" class="pointer actionProgress">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+            <div class="actionMenu" attivo="no" cliccato="no">
+              <span class="itemActionMenu">View detail</span>
+              <span class="itemActionMenu">View PDF</span>
+              <span class="itemActionMenu">View EML</span>
+            </div>
           </td>
         </tr>
         {%endfor%}
