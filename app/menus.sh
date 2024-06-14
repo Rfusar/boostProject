@@ -32,6 +32,10 @@ creaProgetto(){
   echo "      frontend"
   echo "          1f. React"
   echo "          2f. HTML+CSS+JS"
+  echo -e "\033[31;3m"
+  echo "      Job"
+  echo "          1j. Google"
+  echo "          2j. OS"
   echo ""
   echo -e "\033[0m"
 }

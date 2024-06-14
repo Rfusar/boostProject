@@ -1,8 +1,8 @@
 #!/bin/bash
-dir="/home/riccardo/Scrivania/tool/creaProgetto/standard/stili/dashboard"
-dirTemp="/home/riccardo/Scrivania/esperimenti/testUpdate/dashboard"
-mkdir -p "$dirTemp"
-cd "$dirTemp"
+source ./app/consts.sh
+dir="$projectTemplate/dashboard"
+dirTemp="/home/riccardo/Scrivania/esperimenti/updatedFlask"
+mkdir "$dirTemp" && cd "$dirTemp"
 
 mkdir -p \
   applicazione/routes \

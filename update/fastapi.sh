@@ -1,9 +1,9 @@
 #!/bin/bash
-dir="/home/riccardo/Scrivania/tool/creaProgetto/standard/stili/API"
-dirTemp="/home/riccardo/Scrivania/esperimenti/updateFastAPI"
+source ./app/consts.sh
+dir="$projectTemplate/API"
+dirTemp="/home/riccardo/Scrivania/esperimenti/updatedFastAPI"
 
-mkdir -p "$dirTemp"
-cd "$dirTemp"
+mkdir "$dirTemp" && cd "$dirTemp"
 
 mkdir -p services/routes 
 

@@ -1,18 +1,16 @@
 #!/bin/bash
 source ./app/menus.sh
-percorso="/home/riccardo/Scrivania/esperimenti"
-ps="/home/riccardo/Scrivania/tool/creaProgetto/standard/stili/dashboard"
+source ./app/consts.sh
+ps="$projectTemplate/dashboard"
 rf="$ps/Flask/applicazione/routes"
-altriFile="/home/riccardo/Scrivania/tool/creaProgetto/standard"
 
 clear
 read -p "Nome progetto: " progetto
-ls pathProject | grep "wp"
+ls pathProject | grep "^[0-9]w"
 read -p "inserisci codice: " codice
-echo "$percorso/$progetto" > "pathProject/$codice.txt"
+echo "$Esperimenti/$progetto" > "pathProject/$codice.txt"
 percorsoCompleto=$(cat "./pathProject/$codice.txt")
-cd "$percorso"
-mkdir "$progetto"
+cd "$Esperimenti" && mkdir "$progetto"
 
 cd "$percorsoCompleto"
 git init

@@ -1,8 +1,9 @@
 #!/bin/bash
 source ./app/menus.sh
 source ./app/funcs.sh
-workTOOL="/home/riccardo/Scrivania/tool"
+source ./app/consts.sh
 
+cd "$toolPath"
 
 if [ -z "$1" ]; then
   while true; do
@@ -24,18 +25,15 @@ if [ -z "$1" ]; then
     fi
   done
 
+#Con argomenti
 elif [ "$1" == "update" ]; then 
-    cd "$workTOOL" 
     if [ -z "$2" ];then update
     elif [ "$2" == "path" ];then . ./pathProject/setPathProject.sh
     fi
 
-    
-elif [ "$1" == "github" ]; then 
-  . ./app/github.sh
+elif [ "$1" == "github" ]; then  . ./app/github.sh
 
-elif [ "$1" == "help" ]; then
-  menuHelp
+elif [ "$1" == "help" ]; then menuHelp
 
 elif [ "$1" == "studio" ]; then
   menuStudio 

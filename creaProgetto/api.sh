@@ -1,16 +1,15 @@
 #!/bin/bash
-percorso="/home/riccardo/Scrivania/esperimenti"
-ps="/home/riccardo/Scrivania/tool/creaProgetto/standard/stili/API"
-altriFile="/home/riccardo/Scrivania/tool/creaProgetto/standard"
+
+source ./app/consts.sh
+ps="$projectTemplate/API"
 
 clear
 read -p "Nome progetto: " progetto
-ls pathProject | grep "s"
+ls pathProject | grep "^[0-9]+s"
 read -p "inserisci codice: " codice
-echo "$percorso/$progetto" > "pathProject/$codice.txt"
+echo "$Esperimenti/$progetto" > "pathProject/$codice.txt"
 percorsoCompleto=$(cat "./pathProject/$codice.txt")
-cd "$percorso"
-mkdir "$progetto"
+cd "$Esperimenti" && mkdir "$progetto"
 
 cd "$percorsoCompleto"
 git init 
