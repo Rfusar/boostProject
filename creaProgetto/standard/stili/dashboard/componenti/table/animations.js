@@ -1,11 +1,8 @@
 const btnsActions = document.querySelectorAll(".actionProgress")
 const menusActions = document.querySelectorAll(".actionMenu")
 let precedente = false
-let loStesso = false
-
-function GestioneStati(){
-  
-}
+let loStesso = true
+let menusChiusi = true
 
 function animation(btn){
   if(btn.getAttribute("attivo")=="yes"){
@@ -35,16 +32,21 @@ for(let i = 0; i < btnsActions.length; i++){
          if(precedente==j && !loStesso){
              menusActions[j].setAttribute("attivo","no")
              menusActions[j].setAttribute("cliccato","no")
+             if(menusActions[precedente] != undefined){
+                menusActions[precedente].setAttribute("cliccato","no")
+                menusChiusi=true 
+             }
              loStesso=true
          }
          else if(i==j){
            menusActions[j].setAttribute("attivo","yes")
            loStesso=false
+           menusChiusi=false
          }
          else{menusActions[j].setAttribute("attivo","no")}
 
         //Precedente
-        if(precedente==j){
+        if(precedente==j && !menusChiusi){
          menusActions[j].setAttribute("cliccato","yes")
         }
         else{menusActions[j].setAttribute("cliccato","no")}

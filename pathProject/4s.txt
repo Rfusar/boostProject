@@ -1,1 +1,1 @@
-/home/riccardo/Scrivania/WORK/progetti/SERVICE/API_xml
+/home/riccardo/Scrivania/WORK/progetti/SERVICES/API_redis

@@ -38,6 +38,12 @@ creaProgetto(){
 
 continuaProgetto(){
   clear
+  JobsW="/home/riccardo/Scrivania/WORK/progetti/eseguibili"
+  JobsG="/home/riccardo/Scrivania/WORK/progetti/eseguibili/JobsGoogle"
+  WebPages="/home/riccardo/Scrivania/WORK/progetti/webPage"
+  Services="/home/riccardo/Scrivania/WORK/progetti/SERVICES"
+  tool="/home/riccardo/Scrivania/tool"
+
   echo -e "\033[33;1m===================================" 
   echo "|                                 |"
   echo "|       Cosa vuoi continuare?     |"
@@ -45,23 +51,39 @@ continuaProgetto(){
   echo "===================================" 
   echo -e "\033[32;3m"
   echo "      webPage"
-  echo "          1wp. 24Care"
-  echo "          2wp. Spike Inova"
-  echo "          3wp. Autonoleggio"
-  echo "          4wp. prelois-stampanti"
-  echo "          5wp. Rail Traction"
-  echo "          6wp. help-client"
-  echo "          7wp. help-nemesis"
+  indice=0
+  for e in "$WebPages"/*; do
+      indice=$((indice+1))
+      e=$(basename "$e")
+      echo "                  ${indice}w. $e" 
+  done
+
   echo -e "\033[36;3m"
   echo "      service"
-  echo "          1s. 24Care"
-  echo "          2s. Backup"
-  echo "          3s. Import-email"
-  echo "          4s. XML"
-  echo "          5s  PDF"
-  echo "          6s. Autonoleggio"
-  echo "          7s. MongoDB"
-  echo "          8s. Redis"
+  echo "          jobs"
+  echo "              google"
+  indice=0
+  for e in "$JobsG"/*; do
+      indice=$((indice+1))
+      e=$(basename "$e")
+      echo "                  ${indice}jb. $e" 
+  done
+  echo "              locale"
+  indice=0
+  for e in "$JobsW"/*; do
+      indice=$((indice+1))
+      e=$(basename "$e")
+      if [ "$e" != "jobsGoogle" ];then
+        echo "                  ${indice}jw. $e" 
+      fi
+  done
+  echo "          API"
+  indice=0
+  for e in "$Services"/*; do
+      indice=$((indice+1))
+      e=$(basename "$e")
+      echo "                  ${indice}s. $e" 
+  done
   echo -e "\033[34;3m"
   echo "      esperimenti"
   echo "          1e. tool"
@@ -89,10 +111,11 @@ menuHelp(){
   clear
   echo "Sintassi TOOL:"
   echo ""
-  echo "TOOL                menu tool"
-  echo "TOOL update         aggiorna un template"
-  echo "TOOL github         push si repository github"
-  echo "TOOL studio         studia un argomento"
+  echo "TOOL                          menu tool"
+  echo "TOOL update                   aggiorna un template"
+  echo "TOOL update path              aggiorna i percorsi dei progetti"
+  echo "TOOL github                   push si repository github"
+  echo "TOOL studio                   studia un argomento"
   echo ""
   echo ""
 }

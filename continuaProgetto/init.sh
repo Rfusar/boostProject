@@ -6,17 +6,15 @@ source ./app/funcs.sh
 continuaProgetto
 read -p ": " res
 
-progetti=("1wp" "2wp" "3wp" "4wp" "5wp" "6wp" "7wp" "1s" "2s" "3s" "4s" "5s" "6s" "7s" "8s" "9s" "10s")
-
-for p in "${progetti[@]}"; do
-  if [[ "$1" == "$p" ]]; then
-    pythonProject=0
-    break
-  fi
+progetti=()
+for file in "/home/riccardo/Scrivania/tool/pathProject"/*
+do
+    f_name=$(basename "$file")
+    f="${f_name%.*}"
+    progetti+=("$f")
 done
+
 route=$(pathProgetti "$res")
 
 cd $route
-if [[ $pythonProject==0 ]]; then
-  source venv/bin/activate
-fi
+source venv/bin/activate

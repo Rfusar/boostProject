@@ -25,8 +25,10 @@ if [ -z "$1" ]; then
   done
 
 elif [ "$1" == "update" ]; then 
-  cd "$workTOOL" 
-  update
+    cd "$workTOOL" 
+    if [ -z "$2" ];then update
+    elif [ "$2" == "path" ];then . ./pathProject/setPathProject.sh
+    fi
 
     
 elif [ "$1" == "github" ]; then 
