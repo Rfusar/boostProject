@@ -13,7 +13,10 @@ body{
   font-family: "Ubuntu", sans-serif;
 }
 .pointer{cursor: pointer;}
-.link{text-decoration: none;}
+.link{
+    text-decoration: none;
+    color: var(--text-base1);
+}
 
 
 

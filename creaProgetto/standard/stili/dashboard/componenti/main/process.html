@@ -34,12 +34,12 @@
           <td>{{u["reciever"]}}</td>
           <td>{{u["subject"]}}</td>
           <td><span class="type">{{u["status"]}}</span></td>
-          <td style="position: relative" class="pointer actionProgress">
-            <i class="fa-solid fa-ellipsis-vertical"></i>
+          <td style="position: relative">
+            <i class="fa-solid fa-ellipsis-vertical pointer actionProgress"></i>
             <div class="actionMenu" attivo="no" cliccato="no">
-              <span class="itemActionMenu">View detail</span>
-              <span class="itemActionMenu">View PDF</span>
-              <span class="itemActionMenu">View EML</span>
+                <a class="link itemActionMenu pointer animate" href="#"><span>View details</span></a>
+                <a class="link itemActionMenu pointer animate" href="#"><span>View PDF</span></a>
+                <a class="link itemActionMenu pointer animate" href="#"><span>View EML</span></a>
             </div>
           </td>
         </tr>

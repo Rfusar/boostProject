@@ -24,46 +24,29 @@ function animation(btn){
 let precedente = null
 let loStesso = false
 let menusChiusi = true
-const debug = []
 for(let i = 0; i < btnsActions.length; i++){
     btnsActions[i].addEventListener("click", function(){
-        console.log(precedente==i)
-      console.clear()
-      //console.table([{loStesso: loStesso, notLoStesso: !loStesso, menusChiusi: menusChiusi, notMenusChiusi: !menusChiusi}])
-      if(precedente==i){loStesso=true}
+      loStesso = precedente == i && menusChiusi==false ? true : false
       for(let j = 0; j < menusActions.length; j++){
-        let m=menusActions[j]   
-        debug.push({
-          check1: precedente==j && !loStesso, 
-          check3: precedente==j && !menusChiusi, 
-          checkChiudiMenu: m.getAttribute("attivo")=="no" && m.getAttribute("cliccato")=="yes",
-          checkApriMenu: m.getAttribute("attivo")=="yes"
-        })
-        //Quando clicchi lo stesso bottone
-         if(precedente==j && !loStesso){
+         let m=menusActions[j]   
+         //Quando clicchi lo stesso bottone
+         if(precedente==j && loStesso==true){
              m.setAttribute("attivo","no")
-             m.setAttribute("cliccato","no")
-             if(precedente == i){
-                m.setAttribute("cliccato","no")
-                menusChiusi=true
-             }
-             loStesso=false
+             m.setAttribute("cliccato", "yes")
+             menusChiusi=true
          }
          else if(i==j){
            m.setAttribute("attivo","yes")
            menusChiusi=false
-             
          }
          else{m.setAttribute("attivo","no")}
-        //Precedente
-        if(precedente==j && !menusChiusi){
-         m.setAttribute("cliccato","yes")
-        }
-        else{m.setAttribute("cliccato","no")}
-        animation(m)
+
+         //Precedente
+         m.setAttribute("cliccato", precedente==j ? "yes": "no")
+         animation(m)
+         if(menusChiusi==true){m.setAttribute("cliccato", "no")}
       } 
-      precedente = i
-      console.table(debug)
+      precedente = menusChiusi==true ? null : i
    })
 }
 

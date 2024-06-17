@@ -75,17 +75,23 @@
   z-index: -1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 10px 0 10px 5px;
   pointer-events: none;
   opacity: 0;
   position: absolute;
-  right: 60px;
-  width: 150px;
+  right: 70px;
   background-color: var(--bg-base3);
   color: var(--text-base1);
   border-radius: var(--radius-10);
+  overflow: hidden;
 }
 .itemActionMenu{
-  width: max-content;
+    height: max-content;
+    text-align: left;
+    padding: 10px 0 10px 5px;
+    width: 150px;
+    border-left: 3px solid var(--bg-base3)
+}
+.itemActionMenu:hover{
+    background-color: var(--sidebar-hover);
+    border-left: 3px solid var(--sidebar-border);
 }

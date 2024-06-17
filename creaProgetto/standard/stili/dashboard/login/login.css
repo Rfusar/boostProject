@@ -1,7 +1,7 @@
 #displayLogin{
   width: 100vw;
   height: 100vh;
-  background-image: url("/static/img/sfondo_login.jpg");
+  background-image: linear-gradient(to left, #f7f5f5, #d6d4d4);
   background-size: cover;
   background-position: center center;
   display: flex;
@@ -10,7 +10,7 @@
 }
 #cardImgLogin{
   flex: 1;
-  background-color: #000; 
+  background-color: #06023b; 
 }
 #cardCampiLogin{
   flex: 1;
