@@ -1,8 +1,5 @@
 const btnsActions = document.querySelectorAll(".actionProgress")
 const menusActions = document.querySelectorAll(".actionMenu")
-let precedente = false
-let loStesso = true
-let menusChiusi = true
 
 function animation(btn){
   if(btn.getAttribute("attivo")=="yes"){
@@ -24,36 +21,49 @@ function animation(btn){
 }
        
 //Main
+let precedente = null
+let loStesso = false
+let menusChiusi = true
+const debug = []
 for(let i = 0; i < btnsActions.length; i++){
     btnsActions[i].addEventListener("click", function(){
+        console.log(precedente==i)
       console.clear()
+      //console.table([{loStesso: loStesso, notLoStesso: !loStesso, menusChiusi: menusChiusi, notMenusChiusi: !menusChiusi}])
+      if(precedente==i){loStesso=true}
       for(let j = 0; j < menusActions.length; j++){
+        let m=menusActions[j]   
+        debug.push({
+          check1: precedente==j && !loStesso, 
+          check3: precedente==j && !menusChiusi, 
+          checkChiudiMenu: m.getAttribute("attivo")=="no" && m.getAttribute("cliccato")=="yes",
+          checkApriMenu: m.getAttribute("attivo")=="yes"
+        })
         //Quando clicchi lo stesso bottone
          if(precedente==j && !loStesso){
-             menusActions[j].setAttribute("attivo","no")
-             menusActions[j].setAttribute("cliccato","no")
-             if(menusActions[precedente] != undefined){
-                menusActions[precedente].setAttribute("cliccato","no")
-                menusChiusi=true 
+             m.setAttribute("attivo","no")
+             m.setAttribute("cliccato","no")
+             if(precedente == i){
+                m.setAttribute("cliccato","no")
+                menusChiusi=true
              }
-             loStesso=true
+             loStesso=false
          }
          else if(i==j){
-           menusActions[j].setAttribute("attivo","yes")
-           loStesso=false
+           m.setAttribute("attivo","yes")
            menusChiusi=false
+             
          }
-         else{menusActions[j].setAttribute("attivo","no")}
-
+         else{m.setAttribute("attivo","no")}
         //Precedente
         if(precedente==j && !menusChiusi){
-         menusActions[j].setAttribute("cliccato","yes")
+         m.setAttribute("cliccato","yes")
         }
-        else{menusActions[j].setAttribute("cliccato","no")}
- 
-        animation(menusActions[j])
+        else{m.setAttribute("cliccato","no")}
+        animation(m)
       } 
       precedente = i
+      console.table(debug)
    })
 }
 

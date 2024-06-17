@@ -14,10 +14,10 @@
   display: flex
 }
 .cardReport.error{
-  border-left: 10px solid #ff000d; 
+  border-left: 10px solid var(--bg-error-status);
 }
 .cardReport.success{
-  border-left: 10px solid #3cff00;  
+  border-left: 10px solid var(--bg-success-status);  
 }
 .cardReport.normal{
   border-left: 10px solid grey; 

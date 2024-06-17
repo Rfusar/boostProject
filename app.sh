@@ -22,6 +22,10 @@ if [ -z "$1" ]; then
     elif [ "$res" == "2" ]; then
         . ./continuaProgetto/init.sh
         break
+    
+    elif [ "$res" == "3" ]; then
+        . ./creaProgetto/esperimenti.sh
+        break
     fi
   done
 
@@ -39,5 +43,4 @@ elif [ "$1" == "studio" ]; then
   menuStudio 
   read -p ": " argomento
   . ./app/studio.sh "$argomento"
-
 fi

@@ -22,8 +22,8 @@ for(const d of document.querySelectorAll(".type")){
   let bg = null
   let text = null
   switch(d.textContent){
-    case "EML":
-    case "PDF":
+    case "eml":
+    case "pdf":
       d.style.backgroundColor = "var(--bg-error-status)" 
       d.style.color = "var(--text-error-status)"
       break

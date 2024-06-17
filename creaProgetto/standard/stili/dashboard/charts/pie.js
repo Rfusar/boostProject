@@ -1,12 +1,9 @@
-  const ctxPie = document.getElementById('chartPie');
-
-  new Chart(ctxPie, {
+const ctxPie = document.getElementById('chartPie');
+function createChart(){
+  return new Chart(ctxPie, {
     type: 'doughnut',
     data: {
-      labels: [
-        'OK',
-        'Error'
-      ],
+      labels: ['Success','Error'],
       datasets: [{
         label: 'Status Printer',
         data: [
@@ -14,14 +11,32 @@
           Number(document.querySelector("#emailError").textContent)
         ],
         backgroundColor: [
-          "#3cff00",
-          "#ff000d",
+            getComputedStyle(document.documentElement).getPropertyValue('--bg-success-status'),
+            getComputedStyle(document.documentElement).getPropertyValue('--bg-error-status'),
         ],
         borderWidth: 0,
         hoverOffset: 4
       }],
     },
     options: {
-      cutout: "83%" // Imposta il ritaglio delle sezioni al 50% per rendere le sezioni più sottili
+        cutout: "83%",
+        plugins: {
+            legend: {
+                display: true,
+                labels: {
+                    color: getComputedStyle(document.documentElement).getPropertyValue('--text-base1')
+                }
+            },
+            tooltip: {
+                enabled: true
+            }
+        }
     }
   });
+}
+//Aggorina i colori
+let chart = createChart()
+function updateChartColors() {
+    if(chart){chart.destroy()}
+    chart = createChart()
+}

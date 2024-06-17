@@ -9,6 +9,7 @@ Home(){
   echo -e "\033[35;3m"
   echo "      1. crea progetto"
   echo "      2. continua progetto"
+  echo "      3. crea progetto esperimento"
   echo ""
   echo -e "\033[0m"
 }
@@ -94,15 +95,37 @@ continuaProgetto(){
   echo ""
   echo -e "\033[0m"
 }
+menuEsperimenti(){
+  clear
+  echo -e "\033[33;1m======================================" 
+  echo "|                                    |"
+  echo "| Quale linguaggi vuoi sperimentare? |"
+  echo "|                                    |"
+  echo "======================================" 
+  echo -e "\033[35;3m"
+  echo "      Compilati"
+  echo "          1c. C"
+  echo "          2c. C++"
+  echo "          3c. Go"
+  echo "          4c. Java"
+  echo -e "\033[34;3m"
+  echo "      Interpretati"
+  echo "          1i. Python"
+  echo "          2i. Bash"
+  echo "          3i. Perl"
+  echo "          4i. Ruby"
+  echo ""
+  echo ""
+}
 
 menuStudio(){
   clear
-  echo "===================================" 
+  echo -e "\033[33;1m===================================" 
   echo "|                                 |"
   echo "|       Cosa vuoi studiare?       |"
   echo "|                                 |"
   echo "===================================" 
-  echo ""
+  echo -e "\033[35;3m"
   echo "      1. bash"
   echo "      2. microsoft"
   echo "      3. algebra"

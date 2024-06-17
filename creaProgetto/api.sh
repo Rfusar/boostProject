@@ -5,7 +5,7 @@ ps="$projectTemplate/API"
 
 clear
 read -p "Nome progetto: " progetto
-ls pathProject | grep "^[0-9]+s"
+ls pathProject | grep "^[0-9]s"
 read -p "inserisci codice: " codice
 echo "$Esperimenti/$progetto" > "pathProject/$codice.txt"
 percorsoCompleto=$(cat "./pathProject/$codice.txt")

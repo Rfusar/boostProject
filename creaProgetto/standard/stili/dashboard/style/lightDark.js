@@ -43,6 +43,7 @@ function setColors(){
 }
 
 setColors()
+try{updateChartColors()} catch{}
 btnColors.addEventListener("click", function(){
   if(this.getAttribute("colors") == "light"){
     this.setAttribute("colors", "dark")
@@ -54,6 +55,7 @@ btnColors.addEventListener("click", function(){
   }
   for(const c of all){c.style.transition="1s"}
   setColors()
+  try{updateChartColors()} catch{}
   for(const c of document.querySelectorAll(".animate")){c.style.transition="300ms"}
   for(const c of document.querySelectorAll(".animate0")){c.style.transition="0ms"}
 })
